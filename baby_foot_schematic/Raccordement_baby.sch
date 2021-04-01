@@ -1,0 +1,338 @@
+EESchema Schematic File Version 4
+LIBS:baby_foot-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Screw_Terminal_01x10 J6
+U 1 1 606B3945
+P 3400 3900
+F 0 "J6" H 3320 4517 50  0000 C CNN
+F 1 "Screen_connection" H 3320 4426 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_4Ucon_1x10_P3.81mm_Horizontal" H 3400 3900 50  0001 C CNN
+F 3 "~" H 3400 3900 50  0001 C CNN
+	1    3400 3900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x04 J5
+U 1 1 606B39D3
+P 3400 2300
+F 0 "J5" H 3320 2617 50  0000 C CNN
+F 1 "Power 12V" H 3320 2526 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type101_RT01604HBWC_1x04_P5.08mm_Horizontal" H 3400 2300 50  0001 C CNN
+F 3 "~" H 3400 2300 50  0001 C CNN
+	1    3400 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J7
+U 1 1 606B3AA2
+P 5800 4800
+F 0 "J7" H 5906 5078 50  0000 C CNN
+F 1 "But_P2" H 5906 4987 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5800 4800 50  0001 C CNN
+F 3 "~" H 5800 4800 50  0001 C CNN
+	1    5800 4800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J8
+U 1 1 606B3B74
+P 5800 5400
+F 0 "J8" H 5906 5678 50  0000 C CNN
+F 1 "Choc_P2" H 5906 5587 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5800 5400 50  0001 C CNN
+F 3 "~" H 5800 5400 50  0001 C CNN
+	1    5800 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J9
+U 1 1 606B3B9D
+P 5800 6100
+F 0 "J9" H 5906 6378 50  0000 C CNN
+F 1 "But_P1" H 5906 6287 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5800 6100 50  0001 C CNN
+F 3 "~" H 5800 6100 50  0001 C CNN
+	1    5800 6100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J10
+U 1 1 606B3C04
+P 5800 6700
+F 0 "J10" H 5906 6978 50  0000 C CNN
+F 1 "Choc_P1" H 5906 6887 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5800 6700 50  0001 C CNN
+F 3 "~" H 5800 6700 50  0001 C CNN
+	1    5800 6700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Module_electronique:DFPlayer_serie P1
+U 1 1 606B459F
+P 5700 3250
+F 0 "P1" H 5978 3215 50  0000 L CNN
+F 1 "DFPlayer_serie" V 5978 3124 50  0000 L CNN
+F 2 "Module:DFPlayer_serie" H 5500 3800 50  0001 C CNN
+F 3 "" H 5500 3800 50  0001 C CNN
+	1    5700 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F2
+U 1 1 606BFF06
+P 4550 2200
+F 0 "F2" H 4610 2246 50  0000 L CNN
+F 1 "Fuse" H 4610 2155 50  0000 L CNN
+F 2 "Fuse:Fuse_SunFuse-6HP" V 4480 2200 50  0001 C CNN
+F 3 "~" H 4550 2200 50  0001 C CNN
+	1    4550 2200
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4400 2200 3600 2200
+Wire Wire Line
+	4700 2200 5000 2200
+$Comp
+L power:GND #PWR0123
+U 1 1 606C0424
+P 4100 2300
+F 0 "#PWR0123" H 4100 2050 50  0001 C CNN
+F 1 "GND" H 4105 2127 50  0000 C CNN
+F 2 "" H 4100 2300 50  0001 C CNN
+F 3 "" H 4100 2300 50  0001 C CNN
+	1    4100 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2300 3900 2300
+Wire Wire Line
+	3900 2300 3900 2400
+Wire Wire Line
+	3900 2400 3600 2400
+Connection ~ 3900 2300
+Wire Wire Line
+	3900 2300 4100 2300
+$Comp
+L power:+12V #PWR0124
+U 1 1 606C0683
+P 5000 2200
+F 0 "#PWR0124" H 5000 2050 50  0001 C CNN
+F 1 "+12V" H 5015 2373 50  0000 C CNN
+F 2 "" H 5000 2200 50  0001 C CNN
+F 3 "" H 5000 2200 50  0001 C CNN
+	1    5000 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 5000 2200
+Wire Wire Line
+	3600 2500 5000 2500
+Wire Wire Line
+	5000 2500 5000 2200
+$Comp
+L power:GND #PWR0125
+U 1 1 606C1669
+P 6800 3100
+F 0 "#PWR0125" H 6800 2850 50  0001 C CNN
+F 1 "GND" H 6805 2927 50  0000 C CNN
+F 2 "" H 6800 3100 50  0001 C CNN
+F 3 "" H 6800 3100 50  0001 C CNN
+	1    6800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3400 4400 3400
+Wire Wire Line
+	4400 3400 4400 3500
+Wire Wire Line
+	4400 3500 3600 3500
+Wire Wire Line
+	5200 3300 4600 3300
+Wire Wire Line
+	4600 3300 4600 3600
+Wire Wire Line
+	4600 3600 3600 3600
+$Comp
+L power:GND #PWR0126
+U 1 1 606C2874
+P 7100 4000
+F 0 "#PWR0126" H 7100 3750 50  0001 C CNN
+F 1 "GND" H 7105 3827 50  0000 C CNN
+F 2 "" H 7100 4000 50  0001 C CNN
+F 3 "" H 7100 4000 50  0001 C CNN
+	1    7100 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 4400 4100 4400
+Wire Wire Line
+	4100 4400 4100 6700
+Wire Wire Line
+	4100 6700 5600 6700
+Wire Wire Line
+	3600 4300 4300 4300
+Wire Wire Line
+	4300 4300 4300 6100
+Wire Wire Line
+	4300 6100 5600 6100
+Wire Wire Line
+	3600 4200 4850 4200
+Wire Wire Line
+	4850 4200 4850 5400
+Wire Wire Line
+	4850 5400 5600 5400
+Wire Wire Line
+	3600 4100 5000 4100
+Wire Wire Line
+	5000 4100 5000 4800
+Wire Wire Line
+	5000 4800 5600 4800
+Wire Wire Line
+	3600 4000 4900 4000
+Wire Wire Line
+	5200 4000 5200 4900
+Wire Wire Line
+	5200 4900 5600 4900
+Wire Wire Line
+	5200 4900 5200 5500
+Wire Wire Line
+	5200 5500 5600 5500
+Connection ~ 5200 4900
+Wire Wire Line
+	5200 5500 5200 6200
+Wire Wire Line
+	5200 6200 5600 6200
+Connection ~ 5200 5500
+Wire Wire Line
+	5200 6200 5200 6800
+Wire Wire Line
+	5200 6800 5600 6800
+Connection ~ 5200 6200
+Wire Wire Line
+	3600 3900 5050 3900
+Wire Wire Line
+	5400 3900 5400 4700
+Wire Wire Line
+	5400 4700 5600 4700
+Wire Wire Line
+	5400 4700 5400 5300
+Wire Wire Line
+	5400 5300 5600 5300
+Connection ~ 5400 4700
+Wire Wire Line
+	5400 5300 5400 6000
+Wire Wire Line
+	5400 6000 5600 6000
+Connection ~ 5400 5300
+Wire Wire Line
+	5400 6000 5400 6600
+Wire Wire Line
+	5400 6600 5600 6600
+Connection ~ 5400 6000
+$Comp
+L power:+5V #PWR0127
+U 1 1 606C81E0
+P 7300 3900
+F 0 "#PWR0127" H 7300 3750 50  0001 C CNN
+F 1 "+5V" H 7315 4073 50  0000 C CNN
+F 2 "" H 7300 3900 50  0001 C CNN
+F 3 "" H 7300 3900 50  0001 C CNN
+	1    7300 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3900 5400 3900
+Connection ~ 5400 3900
+Wire Wire Line
+	7100 4000 5200 4000
+Connection ~ 5200 4000
+Wire Wire Line
+	6500 3800 3600 3800
+Wire Wire Line
+	3600 3700 6400 3700
+$Comp
+L Connector:Conn_01x03_Male J11
+U 1 1 606CD78F
+P 7500 2300
+F 0 "J11" H 7472 2323 50  0000 R CNN
+F 1 "LED 2" H 7472 2232 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 7500 2300 50  0001 C CNN
+F 3 "~" H 7500 2300 50  0001 C CNN
+	1    7500 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J12
+U 1 1 606CE700
+P 7500 2900
+F 0 "J12" H 7472 2923 50  0000 R CNN
+F 1 "LED1" H 7472 2832 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 7500 2900 50  0001 C CNN
+F 3 "~" H 7500 2900 50  0001 C CNN
+	1    7500 2900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2200 6800 2200
+Wire Wire Line
+	6800 2200 6800 2800
+Wire Wire Line
+	6800 2800 7300 2800
+Connection ~ 6800 2200
+Wire Wire Line
+	6800 2200 7300 2200
+Wire Wire Line
+	6800 3100 6800 3000
+Wire Wire Line
+	6800 3000 7300 3000
+$Comp
+L power:GND #PWR0128
+U 1 1 606D3975
+P 7000 2500
+F 0 "#PWR0128" H 7000 2250 50  0001 C CNN
+F 1 "GND" H 7005 2327 50  0000 C CNN
+F 2 "" H 7000 2500 50  0001 C CNN
+F 3 "" H 7000 2500 50  0001 C CNN
+	1    7000 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 2400 7000 2400
+Wire Wire Line
+	7000 2400 7000 2500
+Wire Wire Line
+	6500 3800 6500 2900
+Wire Wire Line
+	6500 2900 7300 2900
+Wire Wire Line
+	6400 3700 6400 2300
+Wire Wire Line
+	6400 2300 7300 2300
+Wire Wire Line
+	5200 3200 5050 3200
+Wire Wire Line
+	5050 3200 5050 3900
+Connection ~ 5050 3900
+Wire Wire Line
+	5050 3900 5400 3900
+Wire Wire Line
+	5200 3100 4900 3100
+Wire Wire Line
+	4900 3100 4900 4000
+Connection ~ 4900 4000
+Wire Wire Line
+	4900 4000 5200 4000
+$EndSCHEMATC
