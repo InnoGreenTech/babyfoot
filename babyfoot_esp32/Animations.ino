@@ -8,9 +8,8 @@
 
 void score_screen(){
 
+  /* choix de la position du texte en fonction du choix de terrain */
   
-
-
   if ((last_frame + 100)< millis()){
       matrix.setTextSize(1);
     
@@ -20,8 +19,7 @@ void score_screen(){
           matrix.print("GUEST");
           matrix.setCursor(36,1);
           matrix.setTextColor(MAGENTA,BLACK);
-          matrix.print("HOME");
-    
+          matrix.print("HOME");    
       }
     
       else{
@@ -49,7 +47,7 @@ void score_screen(){
       else {matrix.setCursor(8,9);}
       matrix.print(score_p1);
     
-      /* Score palyer 2 */
+      /* Score player 2 */
       
       if (bitRead(statut_game,SCORE_CHANGE)) {
         
@@ -81,7 +79,7 @@ void score_screen(){
         matrix.print(waiting_goal);
       }
     
-      /* Time duration party */
+      /* Time duration game */
     
       else{
       matrix.setTextSize(0);
@@ -89,22 +87,21 @@ void score_screen(){
       matrix.setCursor(12,24);
       matrix.print(duration()); }
 
-      if (waiting_goal>0){
+      /* Choix des couleurs des rubans LED */
+
+      if (waiting_goal>0){                              // si demi
         color_neo(YELLOW_32);
       }
-      else if (bitRead(statut_game,SCORE_CHANGE)){
+      else if (bitRead(statut_game,SCORE_CHANGE)){     //changement de Score
         color_neo(CYAN_32);
       }
-      else {color_neo(0x00FFFFFF);}
+      else {color_neo(0x00FFFFFF);}                   //SINON BLANC
 
       strip1.show();
-      strip2.show();
-
-      
+      strip2.show();      
       last_frame=millis();
 
-    }
-    
+    }    
   
  }
 
@@ -113,6 +110,7 @@ void score_screen(){
 /* 
  *  Ecran du choix du côté de terrain 
  */
+ 
 
 void side_screen(){
 
@@ -125,7 +123,6 @@ void side_screen(){
       matrix.setCursor(36,2);
       matrix.setTextColor(RED,BLACK);
       matrix.print("HOME");
-
   }
 
   else{
@@ -148,6 +145,10 @@ void side_screen(){
   
 }
 
+/*
+ *  Ecran d'attente 
+ */
+
 void waiting_screen(){
   
   statut_animation=LOOP;
@@ -157,12 +158,19 @@ void waiting_screen(){
   
  }
 
-
+/*
+ *  Ecran de lancement d'une nouvelle partie
+ */
+ 
 void start_animation(){
    play_run=0;
    if(frame==1){DFPlayer.play(1);}
    read_open(100);
 }
+
+/*
+ *  Animation de fin de partie
+ */
 
 void end_animation(){
   
@@ -173,18 +181,29 @@ void end_animation(){
   
  }
 
+ /*
+  * Animation d'une gamelle
+  */
+
 void gamelle_animation(){
     if(frame==1){DFPlayer.play(4);}
     read_time(100);
   
  }
+
+ /*
+  *  Animation sur un but
+  */
+  
 void but_animation(){
     if(frame==1){DFPlayer.play(3);}
     read_goal(100);  
 }
 
 
-/* Game over scree */
+/*
+ *  Ecran Game over
+ */
 
 void game_over_screen(){
   
@@ -238,11 +257,8 @@ void game_over_screen(){
       
       if (score_p2>9 or score_p2 < 0){matrix.setCursor(40,9);}
       else {matrix.setCursor(46,9);}
-      matrix.print(score_p2);
-    
-    
-
-    
+      matrix.print(score_p2);  
+       
       /* Time duration party */
     
       matrix.setTextSize(1);
@@ -258,6 +274,5 @@ void game_over_screen(){
       last_frame=millis();
 
     }
-    
-  
+      
  }

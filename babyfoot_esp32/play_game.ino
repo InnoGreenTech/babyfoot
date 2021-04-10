@@ -53,7 +53,7 @@ bool play_game(){
 
 bool score_change(){
   
-  if( !bitRead(statut_game,SCORE_CHANGE) and bitRead(inputs,EDGE_OK) ){
+  if( !bitRead(statut_game,SCORE_CHANGE) and bitRead(inputs,EDGE_OK) and statut_animation==0 ){
     bitSet(statut_game,SCORE_CHANGE);
     return 1;
   }
